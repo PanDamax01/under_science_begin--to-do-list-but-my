@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	// #00cfff color niebieski
+}
+body {
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	color: rgb(255, 255, 255);
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.wrapper {
+	margin: 5em auto;
+	max-width: 100%;
+}
+
+.todolist {
+	max-width: 800px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 4px 4px 5px rgb(82 82 82 / 40%);
+	text-align: center;
+	overflow: hidden;
+
+	&-header {
+		padding: 2em 5em;
+		background-image: linear-gradient(340deg, #045de9 0%, #09c6f9 100%);
+
+		&__title {
+			text-transform: uppercase;
+			text-shadow: 1px 1px 1px #000;
+			margin-bottom: 0.6em;
+		}
+
+		&__input {
+			width: 100%;
+			padding: 1em 1.1em;
+			margin-right: 15px;
+			border: none;
+			border-radius: 5px;
+		}
+
+		&__btn {
+			margin-top: 1em;
+			padding: 0.5em 1em;
+			border: none;
+			border-radius: 5px;
+			color: #000;
+			background-color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 1.8rem;
+			cursor: pointer;
+			transition: color 0.3s, background-color 0.3s;
+
+			&:hover {
+				color: #fff;
+				background-color: rgb(55, 49, 49);
+			}
+		}
+
+		@media (min-width: 576px) {
+			&__input {
+				width: 70%;
+			}
+			&__btn {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&-body {
+		padding: 1em 0;
+		color: #000;
+
+		&__title {
+			text-transform: uppercase;
+			margin-bottom: 0.4em;
+			margin-top: 0.3em;
+			font-size: 2rem;
+		}
+
+		.alertInfo {
+			margin-top: 0.8em;
+			font-weight: 600;
+			color: #235d6b;
+		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 1em;
+			padding-left: 20px;
+			text-align: left;
+			list-style: none;
+			background-color: rgb(227, 228, 229);
+			border-radius: 3px;
+		}
+
+		.tools {
+			display: inline-block;
+
+			button {
+				padding: 1em 1em;
+				border: none;
+				background-color: transparent;
+				cursor: pointer;
+				font-size: 2rem;
+				transition: background-color 0.3s;
+
+				&:hover {
+					background-color: rgb(155, 155, 155);
+				}
+			}
+
+			.complete {
+				color: lime;
+			}
+			.delete {
+				color: tomato;
+			}
+		}
+	}
+}
+.completed {
+	font-size: 1.4rem;
+	color: rgb(79, 82, 92);
+	text-decoration: line-through;
+	font-style: italic;
+}
